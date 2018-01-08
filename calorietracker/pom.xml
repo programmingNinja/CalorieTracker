@@ -42,9 +42,19 @@
         <jvnet.stax.version>1.7.1</jvnet.stax.version>
         <kafka.version>0.9.0.1</kafka.version>
         <apache.commons.version>4.1</apache.commons.version>
+        <google.actions.version>0.1.1</google.actions.version>
+        <javax.servlet.version>3.0.1</javax.servlet.version>
+        <cxf.jaxrs.version>3.2.1</cxf.jaxrs.version>
     </properties>
     <dependencyManagement>
         <dependencies>
+
+            <!-- Google actions libs -->
+            <dependency>
+                <groupId>com.frogermcs.gactions</groupId>
+                <artifactId>gactions</artifactId>
+                <version>${google.actions.version}</version>
+            </dependency>
 
             <!-- Modules -->
             <dependency>
@@ -52,7 +62,13 @@
                 <artifactId>services</artifactId>
                 <version>${project.parent.version}</version>
             </dependency>
-            
+
+            <dependency>
+                <groupId>com.calorietracker.services</groupId>
+                <artifactId>api</artifactId>
+                <version>${project.parent.version}</version>
+            </dependency>
+
             <!-- Jackson libs -->
             <dependency>
                 <groupId>org.codehaus.jackson</groupId>
@@ -151,12 +167,12 @@
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-context</artifactId>
                 <version>${spring.version}</version>
-                <exclusions>
+                <!-- <exclusions>
                     <exclusion>
                         <groupId>commons-logging</groupId>
                         <artifactId>commons-logging</artifactId>
                     </exclusion>
-                </exclusions>
+                </exclusions> -->
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
@@ -196,6 +212,16 @@
                 <groupId>javax.inject</groupId>
                 <artifactId>javax.inject</artifactId>
                 <version>${javax.inject.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>servlet-api</artifactId>
+                <version>${javax.servlet.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-rt-frontend-jaxrs</artifactId>
+                <version>${cxf.jaxrs.version}</version>
             </dependency>
 
             <dependency>
