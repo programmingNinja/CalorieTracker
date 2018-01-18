@@ -12,6 +12,9 @@
     <url>http://maven.apache.org</url>
 
     <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jackson.version>1.9.12</jackson.version>
         <hibernate.version>4.2.18.Final</hibernate.version>
@@ -42,7 +45,7 @@
         <jvnet.stax.version>1.7.1</jvnet.stax.version>
         <kafka.version>0.9.0.1</kafka.version>
         <apache.commons.version>4.1</apache.commons.version>
-        <google.actions.version>0.1.1</google.actions.version>
+        <google.actions.version>1.6.12</google.actions.version>
         <javax.servlet.version>3.0.1</javax.servlet.version>
         <cxf.jaxrs.version>3.2.1</cxf.jaxrs.version>
     </properties>
@@ -51,8 +54,14 @@
 
             <!-- Google actions libs -->
             <dependency>
-                <groupId>com.frogermcs.gactions</groupId>
-                <artifactId>gactions</artifactId>
+                <groupId>ai.api</groupId>
+                <artifactId>libai</artifactId>
+                <version>${google.actions.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>ai.api.libai.web</groupId>
+                <artifactId>libai-web-servlet</artifactId>
                 <version>${google.actions.version}</version>
             </dependency>
 
@@ -167,12 +176,8 @@
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-context</artifactId>
                 <version>${spring.version}</version>
-                <!-- <exclusions>
-                    <exclusion>
-                        <groupId>commons-logging</groupId>
-                        <artifactId>commons-logging</artifactId>
-                    </exclusion>
-                </exclusions> -->
+                <!-- <exclusions> <exclusion> <groupId>commons-logging</groupId> <artifactId>commons-logging</artifactId> 
+                    </exclusion> </exclusions> -->
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
@@ -197,11 +202,7 @@
                 <artifactId>mysql-connector-java</artifactId>
                 <version>${mysql-connector.version}</version>
             </dependency>
-            <dependency>
-                <groupId>org.jvnet.staxex</groupId>
-                <artifactId>stax-ex</artifactId>
-                <version>${jvnet.stax.version}</version>
-            </dependency>
+
             <dependency>
                 <groupId>org.testng</groupId>
                 <artifactId>testng</artifactId>

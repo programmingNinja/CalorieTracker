@@ -28,8 +28,8 @@
             <artifactId>api</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.frogermcs.gactions</groupId>
-            <artifactId>gactions</artifactId>
+            <groupId>ai.api.libai.web</groupId>
+            <artifactId>libai-web-servlet</artifactId>
         </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>

@@ -14,6 +14,7 @@
     <servlet>
         <servlet-name>CXFServlet</servlet-name>
         <servlet-class>com.calorietracker.services.services.CalorieTrackerServiceImpl</servlet-class>
+         <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
         <servlet-name>CXFServlet</servlet-name>

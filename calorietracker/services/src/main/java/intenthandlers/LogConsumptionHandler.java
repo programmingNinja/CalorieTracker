@@ -1,20 +1,17 @@
 package intenthandlers;
 
-import com.frogermcs.gactions.ResponseBuilder;
-import com.frogermcs.gactions.api.RequestHandler;
-import com.frogermcs.gactions.api.request.RootRequest;
-import com.frogermcs.gactions.api.response.RootResponse;
+import ai.api.model.Result;
 
-public class LogConsumptionHandler extends RequestHandler {
+public class LogConsumptionHandler implements LogHandler {
 
-    public LogConsumptionHandler(RootRequest rootRequest) {
-        super(rootRequest);
+    public LogConsumptionHandler() {
     }
 
     @Override
-    public RootResponse getResponse() {
-        System.out.println("Request = " + getRootRequest().toString());
-        return ResponseBuilder.tellResponse("You have reached Log Consumption handler");
+    public String log(Result result) {
+        String response = "you ate food " + result.getStringParameter("food");
+        return response;
+
     }
 
 }
