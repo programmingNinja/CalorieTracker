@@ -9,7 +9,7 @@ public class LogConsumptionHandler implements LogHandler {
 
     @Override
     public String log(Result result) {
-        String response = "you ate food " + result.getStringParameter("food");
+        String response = "[server] you ate food " + result.getStringParameter("food");
         return response;
 
     }

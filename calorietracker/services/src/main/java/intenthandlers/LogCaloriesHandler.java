@@ -10,7 +10,7 @@ public class LogCaloriesHandler implements LogHandler {
 
     @Override
     public String log(Result result) {
-        String response = "you consumer " + result.getStringParameter("calorieValue") + " calories";
+        String response = "[server] you consumer " + result.getStringParameter("calorieValue") + " calories";
         return response;
     }
 
