@@ -307,7 +307,7 @@
         <!--other repositories if any -->
         <repository>
             <id>project.local</id>
-            <name>CalorieTracker</name>
+            <name>project</name>
             <url>file:${project.basedir}/repo</url>
         </repository>
     </repositories>
